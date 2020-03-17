@@ -42,8 +42,7 @@
 \usepackage{booktabs} 
 
 
-%margins
- \geometry{letterpaper, left=.75in, right=.75in, top=1.1in, bottom=1in}
+
 
 %setting indent 
 %\usepackage{indentfirst} %indent first paragraph in section 
@@ -68,22 +67,22 @@
 
 %New commands
 \newcommand*{\xdash}[1][3em]{\rule[0.5ex]{#1}{0.55pt}} %dash lines
-\newcommand{\pval}{\text{$p$-value}}
-\newcommand{\then}{\stackrel{\text{then}}{\implies}}
-\newcommand{\Then}{\stackrel{\text{Then}}{\implies}}
-\newcommand{\thenm}{$\stackrel{\text{then}}{\implies}$}
+\newcommand{\pval}{\text{$p$-value}} %p-value in text
+\newcommand{\then}{\stackrel{\text{then}}{\implies}} %implies arrow with 'then' text
+\newcommand{\Then}{\stackrel{\text{Then}}{\implies}} %implies arrow with 'Then' text
+\newcommand{\thenm}{$\stackrel{\text{then}}{\implies}$} %implies arrow with 'then' text for when out of math mode
 \newcommand{\simiid}{\stackrel{\text{iid}}{\sim}} %iid distributions
 \newcommand{\ssum}{\textstyle\sum} %smallsum 
-\newcommand{\conprob}{\stackrel{\Ps}{\to}}
-\newcommand{\conlaw}{\stackrel{\Ls}{\to}}
-\newcommand{\condist}{\stackrel{\Ds}{\to}}
+\newcommand{\conprob}{\stackrel{\Ps}{\to}} % converge in probablity 
+\newcommand{\conlaw}{\stackrel{\Ls}{\to}} % converge in law
+\newcommand{\condist}{\stackrel{\Ds}{\to}} % converge in distribution 
 \newcommand*\circled[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt] (char) {#1};}} %for chacters in circle 
 \newcommand{\vs}{\text{ vs }} % vs for hypothesis testing
 \newcommand{\asn}{\text{ as } n \to \infty} % as n \to \infty 
 \newcommand{\astto}{\text{ as } t \to \infty} % as t \to \infty 
-\newcommand{\as}{\text{ as }} % as n \to \infty
-\newcommand{\nto}{n \to \infty} % as n \to \infty 
-\newcommand{\tto}{t \to \infty} % as t \to \infty 
+\newcommand{\as}{\text{ as }} % as in text, with spaces around
+\newcommand{\nto}{n \to \infty} % n \to \infty 
+\newcommand{\tto}{t \to \infty} % t \to \infty 
 \newcommand{\cir[1]}{$\circled{#1}$} % short-hand circled
 \newcommand*\Ex[1]{\mathbb{E}\left[ #1 \right]} %expected value
 \newcommand*\Var[1]{\text{Var} \left( #1 \right)} %variance
@@ -96,11 +95,11 @@
 \newcommand{\set}{\stackrel{set}{=}} %set as ....
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert} %norm command
 \newcommand{\abs}[1]{\left\lvert#1\right\rvert} %abs value command
-\newcommand{\chk}{\textcolor{red}{\text{CHECK!}}}
+\newcommand{\chk}{\textcolor{red}{\text{CHECK!}}} %check, red
 \newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}} %indepdence PART 1/2 
 \def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}} %indepdence PART 2/2
 \newcommand{\simm}[1]{\stackrel{#1}{\sim}} %~ with something over it
-\newcommand{\simin}{\stackrel{\independent}{\sim}} %independent
+\newcommand{\simin}{\stackrel{\independent}{\sim}} %independently follows
 \newcommand{\pj}[1]{\pmb{P}_{#1}} %projection matrix 
 \newcommand{\inn}[1]{\left\langle#1\rightrangle} %inner product value command
 \newcommand{\qed}{\phantom{x} \hfill  $\square$}
