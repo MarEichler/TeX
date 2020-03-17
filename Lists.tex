@@ -115,6 +115,40 @@ Requires \pack{enumitem} package
 \end{enumerate}
 \end{lstlisting}
 
+\subsection{In-List Spacing}
+\begin{multicols}{2}
+\begin{enumerate}[itemsep=0pt, parsep=0pt]
+	\item item one
+	\item item two
+	\item item three
+\end{enumerate} 
+\columnbreak 
+\begin{enumerate}[itemsep=10pt, parsep=10pt]
+	\item item one
+	\item item two
+	\item item three
+\end{enumerate} 
+\end{multicols}
+\begin{multicols}{2}
+\begin{lstlisting}
+\begin{enumerate}[itemsep=0pt,
+                  parsep=0pt]
+\item item one
+\item item two
+\item item three
+\end{enumerate} 
+\end{lstlisting}
+	\columnbreak 
+\begin{lstlisting}
+\begin{enumerate}[itemsep=10pt, 
+                  parsep=10pt]
+\item item one
+\item item two
+\item item three
+\end{enumerate} 
+\end{lstlisting}
+\end{multicols}
+
 
 \section{Links that were helpful} 
 \href{https://tex.stackexchange.com/questions/278877/how-to-change-itemize-bullets-with-specific-alphabet}{StackExchange: how to change itemize bullets with specific alphabet} \\
