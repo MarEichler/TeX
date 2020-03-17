@@ -1,0 +1,225 @@
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr, titlesec} %fancy header
+\usepackage{geometry} %set margin
+\usepackage{titlesec}
+\usepackage{mathtools, amsmath,amsfonts,amssymb} %math tools 
+\usepackage{lastpage} %to use last page 
+\usepackage{enumitem} %enumerate package for (1, 2, 3, ...) or (a, b, c, ...)
+\usepackage{fancyhdr,lastpage} %header info
+\usepackage{fullpage} % changes the margin
+\usepackage{ulem} %using fancy underlining (wave, dots, etc.)   
+\usepackage{graphicx} %to add pictures 
+\usepackage{subcaption} %for adding pictures 
+\usepackage[dvipsnames]{xcolor} %for color names https://en.wikibooks.org/wiki/LaTeX/Colors
+\usepackage{mathrsfs} %script letters
+\usepackage{upgreek} %different style of greek letters 
+\usepackage{wrapfig} %wrap text around graphic 
+\usepackage{tikz} %use for new command: \circled{}
+\usepackage{booktabs}
+\usepackage{parskip} %new paragraph as skip
+\usepackage{bbm} % for mathbb for numbers 
+\usepackage{centernot} %so line through center of imply
+\usepackage{multicol} %multi column
+\usepackage{multirow} %multi rowssss 
+\usepackage[mathscr]{euscript} %Euler Script Font
+\usepackage[symbol]{footmisc} %symbols for footnotes 
+\usepackage{array} %array and table
+\usepackage{units} % for nice frac
+\usepackage{contour} %fill in around text 
+\usepackage{tabu} %type of tables 
+\usepackage{vwcol} %variable width column, different size columns 
+\usepackage{soul} % strickthrough = \st{}
+\usepackage{extsizes}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{color,overpic}
+\usepackage{hyperref}
+\usepackage{nccmath}
+\usepackage{cancel} % to cancel out lines in equaition \cancel{}
+\usepackage{listings} %to put code in line 
+\usepackage{paracol} %different size columns 
+\usepackage{lipsum} % for dummy text
+\usepackage{booktabs} 
+
+
+%margins
+ \geometry{letterpaper, left=.75in, right=.75in, top=1.1in, bottom=1in}
+
+%setting indent 
+%\usepackage{indentfirst} %indent first paragraph in section 
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt} %SENT INDENT TO ZERO 
+\renewcommand{\indent}{\hspace*{\tindent}}
+
+%creating fourth section
+\setcounter{secnumdepth}{5} %5 so that it's in table of contents
+\setcounter{tocdepth}{5} %5 so that its in table of contents 
+\titleformat{\paragraph}
+{\normalfont\normalsize\itshape}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+%pictures in multicolumns
+\newenvironment{Figure}
+{\par\medskip\noindent\minipage{\linewidth}}
+{\endminipage\par\medskip}
+
+
+%New commands
+\newcommand*{\xdash}[1][3em]{\rule[0.5ex]{#1}{0.55pt}} %dash lines
+\newcommand{\pval}{\text{$p$-value}}
+\newcommand{\then}{\stackrel{\text{then}}{\implies}}
+\newcommand{\Then}{\stackrel{\text{Then}}{\implies}}
+\newcommand{\thenm}{$\stackrel{\text{then}}{\implies}$}
+\newcommand{\simiid}{\stackrel{\text{iid}}{\sim}} %iid distributions
+\newcommand{\ssum}{\textstyle\sum} %smallsum 
+\newcommand{\conprob}{\stackrel{\Ps}{\to}}
+\newcommand{\conlaw}{\stackrel{\Ls}{\to}}
+\newcommand{\condist}{\stackrel{\Ds}{\to}}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=2pt] (char) {#1};}} %for chacters in circle 
+\newcommand{\vs}{\text{ vs }} % vs for hypothesis testing
+\newcommand{\asn}{\text{ as } n \to \infty} % as n \to \infty 
+\newcommand{\astto}{\text{ as } t \to \infty} % as t \to \infty 
+\newcommand{\as}{\text{ as }} % as n \to \infty
+\newcommand{\nto}{n \to \infty} % as n \to \infty 
+\newcommand{\tto}{t \to \infty} % as t \to \infty 
+\newcommand{\cir[1]}{$\circled{#1}$} % short-hand circled
+\newcommand*\Ex[1]{\mathbb{E}\left[ #1 \right]} %expected value
+\newcommand*\Var[1]{\text{Var} \left( #1 \right)} %variance
+\newcommand*\Cov[1]{\text{Cov} \left( #1 \right)} %Covariance 
+\newcommand*\Cor[1]{\text{Corr} \left( #1 \right)} %Correlation  Cor(A,B) = Cov(A,B) / sqrt{ VarA, VarB} 
+\newcommand*\se[1]{\text{s.e.} \left( #1 \right)} %standard error 
+\newcommand*\sd[1]{\text{s.d.} \left( #1 \right)} %standard deviation 
+\newcommand*\cv[1]{\text{c.v.} \left( #1 \right)} %co-efficent of variance 
+\newcommand{\df}{\stackrel{def}{=}} % define as... 
+\newcommand{\set}{\stackrel{set}{=}} %set as ....
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert} %norm command
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert} %abs value command
+\newcommand{\chk}{\textcolor{red}{\text{CHECK!}}}
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}} %indepdence PART 1/2 
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}} %indepdence PART 2/2
+\newcommand{\simm}[1]{\stackrel{#1}{\sim}} %~ with something over it
+\newcommand{\simin}{\stackrel{\independent}{\sim}} %independent
+\newcommand{\pj}[1]{\pmb{P}_{#1}} %projection matrix 
+\newcommand{\inn}[1]{\left\langle#1\rightrangle} %inner product value command
+\newcommand{\qed}{\phantom{x} \hfill  $\square$}
+\newcommand{\prop}{\phantom{x} \hfill $\star$}
+\newcommand{\ind}{\mathbbm{1}} %indicator function 
+\newcommand{\phant}{\phantom{x}} 
+\newcommand{\bars}[1]{\underline{\overline{#1}}}
+\newcommand{\OR}{\text{OR}} %Odds Ratio (OR) 
+\newcommand{\odds}[1]{\text{odds}_{\text{#1}}} %odds with subscript  
+\newcommand{\outstanding}[1]{\textcolor{red}{\text{OUTSTANDING: }\text{#1}}} %odds with subscript 
+
+
+%new underline command 
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+	\uline{\phantom{#1}}%
+	\llap{\contour{white}{#1}}%
+}
+
+%highlight
+\newcommand{\highlight}[1]{%
+	\colorbox{blue!10}{$\displaystyle#1$}} 
+
+
+%Letters with Lines 
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\I}{\mathbb{I}} %identity matrix 
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\pr}{\mathbb{P}}
+\newcommand{\C}{\mathbb{C}} 
+
+%Script Letters 
+\newcommand{\Us}{\mathcal{U}}
+\newcommand{\Vs}{\mathcal{V}}
+\newcommand{\Ws}{\mathcal{W}}
+\newcommand{\Xs}{\mathcal{X}}
+\newcommand{\Ns}{\mathcal{N}}
+\newcommand{\Ps}{\mathcal{P}}
+\newcommand{\As}{\mathcal{A}}
+\newcommand{\Hs}{\mathcal{H}}
+\newcommand{\Ls}{\mathcal{L}}
+\newcommand{\mvn}{\mathcal{MVN}} %Multi-variate normal 
+\newcommand{\Is}{\mathcal{I}} %Fisher's Information 
+\newcommand{\Ds}{\mathcal{D}}
+\newcommand{\Ys}{\mathcal{Y}}
+\newcommand{\Ts}{\mathcal{T}}
+\newcommand{\Fs}{\mathcal{F}}
+
+%bold in math mode
+\newcommand{\Ab}{\pmb{A}}
+\newcommand{\ab}{\pmb{a}}
+\newcommand{\bb}{\pmb{b}}
+\newcommand{\Cb}{\pmb{C}}
+\newcommand{\cb}{\pmb{c}}
+\newcommand{\Db}{\pmb{D}}
+\newcommand{\eb}{\pmb{e}}
+\newcommand{\gb}{\pmb{g}}
+\newcommand{\Hb}{\pmb{H}}
+\newcommand{\hb}{\pmb{h}}
+\newcommand{\Jb}{\pmb{J}}
+\newcommand{\Lb}{\pmb{L}}
+\newcommand{\Mb}{\pmb{M}}
+\newcommand{\Pb}{\pmb{P}}
+\newcommand{\Qb}{\pmb{Q}}
+\newcommand{\tb}{\pmb{t}}
+\newcommand{\Ub}{\pmb{U}}
+\newcommand{\ub}{\pmb{u}}
+\newcommand{\Vb}{\pmb{V}}
+\newcommand{\vb}{\pmb{v}}
+\newcommand{\Wb}{\pmb{W}}
+\newcommand{\Xb}{\pmb{X}}
+\newcommand{\xb}{\pmb{x}}
+\newcommand{\Yb}{\pmb{Y}}
+\newcommand{\Zb}{\pmb{Z}}
+\newcommand{\zb}{\pmb{z}}
+\newcommand{\yb}{\pmb{y}}
+
+\newcommand{\betab}{\pmb{\beta}}
+\newcommand{\mub}{\pmb{\mu}}
+\newcommand{\omegab}{\pmb{\omega}}
+\newcommand{\xib}{\pmb{\xi}}
+\newcommand{\epsilonb}{\pmb{\epsilon}}
+\newcommand{\etab}{\pmb{\eta}}
+\newcommand{\lambdab}{\pmb{\lambda}}
+\newcommand{\Sigmab}{\pmb{\Sigma}} 
+\newcommand{\thetab}{\pmb{\theta}}
+\newcommand{\deltab}{\pmb{\delta}}
+\newcommand{\pib}{\pmb{\pi}}
+
+
+\newcommand{\ob}{\pmb{0}}
+\newcommand{\Pw}{\pmb{P_{\omega}}} %projection oberator 
+\newcommand{\Pwo}{\pmb{P}_{\pmb{\omega}_0}} %projection oberator 
+\newcommand{\w}{\pmb{\omega}} %bolded omega
+\newcommand{\1}{\pmb{1}} % \vector of ones 
+
+
+%text in mathmode
+\newcommand{\Ht}{\text{H}}
+\newcommand{\Ut}{\text{U}}
+\newcommand{\BNt}{\text{BN}}
+\newcommand{\Bias}{\text{Bias}}
+\newcommand{\sgn}{\text{sign}} %sign 
+\newcommand{\spn}{\text{span}} %span
+\newcommand{\str}{\text{str}} % for stratified sampling 
+
+%distributions 
+\newcommand{\Gdist}{\text{Gamma}} % Gamma 
+\newcommand{\Bern}{\text{Bernoulli}} %Bernoulli
+\newcommand{\Expon}{\text{Exponential}} %Exponential
+\newcommand{\Pois}{\text{Poisson}} % Poisson
+\newcommand{\Unif}{\text{Uniform}} % Uniform 
+\newcommand{\Bdist}{\text{Beta}} % Beta
+\newcommand{\Binom}{\text{Binomial}} % Beta
+\newcommand{\Multinom}{\text{Multinomial}} % Multinomial
+
+
+%array strech \arraycolsep=1pt \def\arraystretch{1.4}   \begin{array}
