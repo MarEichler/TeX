@@ -1,0 +1,96 @@
+\documentclass[12pt, letterpaper]{article}
+
+\usepackage{multicol} %multi column
+\usepackage{multirow} %multi rowssss
+\usepackage{ctable} %for \specialrule, adjust width of horizontal lines 
+\usepackage{amsmath} % for \text func
+\usepackage{caption} 
+	% bold 'table #' in title
+	% add caption at bottom 
+
+	
+
+\begin{document}
+
+\captionsetup{labelfont=bf} %this bold the 'table #' for tables 
+\begin{table}
+\caption{Results for Example 1}
+\vspace{12pt} 
+\begin{tabular}{|c| c|c ||c|c|c|c|c|c|c|}
+	\hline 
+	\multicolumn{3}{|c||}{\multirow{2}{*}{\textbf{Measures}}} & \multicolumn{7}{c|}{\textbf{Results}}
+	\\ \cline{4-10} 
+	\multicolumn{3}{|c||}{}	&\textbf{1}	&\textbf{2}	&\textbf{3}	&\textbf{4}	&\textbf{5}	&\textbf{6}	&\textbf{7} 
+	\\ \specialrule{.1em}{.05em}{.05em}
+%PAIRWISE  
+	\multirow{3}{*}{\textbf{pairwise}} 
+	& \multicolumn{2}{|c||}{\textbf{precision}}	&1.000	&1.000	&1.000	&0.548	&0.438	&0.250	&0.000
+	\\ \cline{2-10}
+	& \multicolumn{2}{|c||}{\textbf{recall}}	&1.000	&1.000	&0.714	&1.000	&1.000	&0.100	&0.000
+	\\ \cline{2-10}
+	& \multicolumn{2}{|c||}{\pmb{$F_1$}}		&1.000	&1.000	&0.833	&0.700	&0.609	&0.400	&0.000
+	\\ \hline \hline 
+%CLUSTER  
+	\multirow{3}{*}{\textbf{cluster}} 
+	& \multicolumn{2}{|c||}{\textbf{precision}}	&1.000	&1.000	&1.000	&0.500	&0.500	&0.000	&0.000
+	\\ \cline{2-10}
+	& \multicolumn{2}{|c||}{\textbf{recall}}	&1.000	&1.000	&1.000	&0.333	&0.333	&0.000	&0.000
+	\\ \cline{2-10}
+	& \multicolumn{2}{|c||}{\pmb{$F_1$}}		&1.000	&1.000	&1.000	&0.400	&0.400	&0.000	&0.000
+	\\ \hline \hline
+%CLOSETS CLUSTER  
+	\multirow{3}{*}{\textbf{closest cluster}} 
+	& \multicolumn{2}{|c||}{\textbf{precision}}	&1.000	&1.000	&1.000	&0.548	&0.438	&0.250	&0.000
+	\\ \cline{2-10}
+	& \multicolumn{2}{|c||}{\textbf{recall}}	&1.000	&1.000	&1.000	&0.548	&0.438	&0.250	&0.000
+	\\ \cline{2-10}
+	& \multicolumn{2}{|c||}{\pmb{$F_1$}}		&1.000	&1.000	&1.000	&0.548	&0.438	&0.250	&0.000
+	\\ \hline \hline
+%MUC 
+\multirow{3}{*}{\textbf{MUC}} 
+	& \multicolumn{2}{|c||}{\textbf{precision}}	&1.000	&1.000	&1.000	&0.800	&0.750	&0.375	&0.375
+	\\ \cline{2-10}
+	& \multicolumn{2}{|c||}{\textbf{recall}}	&1.000	&1.000	&1.000	&0.667	&0.667	&0.333	&0.389
+	\\ \cline{2-10}
+	& \multicolumn{2}{|c||}{\pmb{$F_1$}}		&1.000	&1.000	&1.000	&0.727	&0.706	&0.353	&0.382
+	\\ \hline \hline
+%B^3 
+	\multirow{3}{*}{\pmb{$B^3$}} 
+	& \multicolumn{2}{|c||}{\textbf{precision}}	&1.000	&1.000	&1.000	&0.700	&0.625	&0.343	&1.000
+	\\ \cline{2-10}
+	& \multicolumn{2}{|c||}{\textbf{recall}}	&1.000	&1.000	&1.000	&1.000	&1.000	&1.000	&0.375
+	\\ \cline{2-10}
+	& \multicolumn{2}{|c||}{\pmb{$F_1$}}		&1.000	&1.000	&1.000	&0.824	&0.769	&0.512	&0.545
+	\\ \hline \hline
+%CEAF 
+	\multirow{6}{*}{\textbf{CEAF}} 
+	%PHI_3
+		& \multirow{3}{*}{\pmb{$\phi_3$}}
+		&\textbf{precision}						&1.000	&1.000	&1.000	&0.750	&0.625	&0.375	&0.375
+	\\ \cline{3-10}
+		&&\textbf{recall}						&1.000	&1.000	&1.000	&0.750	&0.625	&0.375	&0.375
+	\\ \cline{3-10}
+		&&\pmb{$F_1$}							&1.000	&1.000	&1.000	&0.750	&0.625	&0.375	&0.375
+	\\ \cline{2-10}  
+	%PHI_4
+	& \multirow{3}{*}{\pmb{$\phi_4$}}
+	&\textbf{precision}							&1.000	&1.000	&1.000	&0.875	&0.833	&0.545	&0.208
+	\\ \cline{3-10}
+	&&\textbf{recall}							&1.000	&1.000	&1.000	&0.583	&0.556	&0.182	&0.556
+	\\ \cline{3-10}
+	&&\pmb{$F_1$}								&1.000	&1.000	&1.000	&0.700	&0.667	&0.273	&0.303
+	\\ \hline \hline 
+%BMD  
+	\multicolumn{1}{|c}{\textbf{BMD}} &
+	\multicolumn{2}{c||}{ }						&1.000	&1.000	&1.000	&0.857	&0.857	&0.714	&0.286
+	\\ \hline 
+
+\end{tabular}
+\vspace{6pt}
+\caption*{Note: The reported BMD scores above are calculated as 1 - actual BMD to give more comparative score with other measures.}
+\end{table}
+
+
+
+
+\end{document}
