@@ -1,5 +1,5 @@
-.aux
-.gz
-.out
-.txt
-.syntex/
+.aux/
+.gz/
+.out/
+.txt/
+.syntex.gz/
