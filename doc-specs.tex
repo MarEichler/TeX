@@ -19,15 +19,20 @@
 \renewcommand{\headrulewidth}{0pt}
 
 %HEADER
-\lhead{Title}
-\rhead{Page \thepage \text{ of} \pageref{LastPage}}
 \setlength{\headsep}{15pt}
 %two lines for headers: 30 pt
 %one line for headers: 15 pt
 
+\lhead{Title \\ \rightmark}
+\rhead{Page \thepage \text{ of} \pageref{LastPage}}
+
 % \rightmark = # Section | #.# Subsection 
 \renewcommand{\sectionmark}[1]{\gdef\currsection{\thesection \ #1}}
 \renewcommand{\subsectionmark}[1]{\markright{\currsection\ $\mid$ \thesubsection \  #1}}
+
+% \rightmark = # Section 
+%\renewcommand{\sectionmark}[1]{\markright{\thesection \ #1 }}
+
 
 
 \begin{document}

@@ -10,8 +10,12 @@
 language=TeX,					% the language of the code
 basicstyle=\footnotesize\ttfamily, 	% basic font setting\
 %keywords (red)
-keywordstyle=\color{Maroon},    % keyword style 
-morekeywords={alph, arabic, Alph}, 			% if you want to add more keywords to the set
+keywordstyle=\color{Maroon},    % keyword style
+morekeywords={
+	alph, arabic, Alph, newcommand, rule, text, implies, stackrel, tikz, node, left right, lVert, rVert, protect, 
+	mathpalette, independenT, perp, mathrel, mkern2, rlap pmb, phantom, mathbbm, text, underline, overline,
+	textcolor, textstyle, implies, rule, mathbb, infty, definecolor, colorbox, small, texttt
+}, 								% if you want to add more keywords to the set
 deletekeywords={...},           % if you want to delete keywords from the given language
 %comments
 commentstyle=\color{gray},    	% comment style
@@ -22,15 +26,23 @@ stepnumber=1,					% the step between two line-numbers. If it's 1, each line will
 numbers=left,					% where to put the line-numbers; possible values are (none, left, right)
 numbersep=5pt,					% how far the line-numbers are from the code
 numberstyle=\tiny\color{gray}, 	% the style that is used for the line-numbers
+frame=single,	                   % adds a frame around the code
 % light blue works
 classoffset=1, 					% starting new class
 morekeywords={begin, end},
 keywordstyle=\color{Cyan}\bfseries,
 classoffset=0,
-% dark blue words (pacages)
+% dark blue words (packages)
 classoffset=2, 					% starting new class
 morekeywords={itemize, enumerate},
 keywordstyle=\color{blue},
 classoffset=0,
-frame=single,	                   % adds a frame around the code
+%NEW COMMANDS
+classoffset=3, 					% starting new class
+morekeywords={...},
+keywordstyle=\color{Violet},
+classoffset=0,
+%MATH MODE
+morecomment=[s][\color{BurntOrange}]{\$}{\$}
 }
+
