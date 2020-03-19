@@ -9,40 +9,80 @@
 \lstset{
 language=TeX,					% the language of the code
 basicstyle=\footnotesize\ttfamily, 	% basic font setting\
-%keywords (red)
-keywordstyle=\color{Maroon},    % keyword style
-morekeywords={
-	alph, arabic, Alph, newcommand, rule, text, implies, stackrel, tikz, node, left right, lVert, rVert, protect, 
-	mathpalette, independenT, perp, mathrel, mkern2, rlap pmb, phantom, mathbbm, text, underline, overline,
-	textcolor, textstyle, implies, rule, mathbb, infty, definecolor, colorbox, small, texttt
-}, 								% if you want to add more keywords to the set
-deletekeywords={...},           % if you want to delete keywords from the given language
-%comments
+%keywords
+keywordstyle=\color{Maroon},    % keyword style							% if you want to add more keywords to the set
+%COMMENTS
 commentstyle=\color{gray},    	% comment style
-%line numbers 
+%LINE NUMBERS AND BOX STYLE
 firstnumber=1,                	% start line enumeration with line 1
 stepnumber=1,					% the step between two line-numbers. If it's 1, each line will be numbered
-%frame=single,	               	% adds a frame around the code             	
+frame=single,	               	% adds a frame around the code             	
 numbers=left,					% where to put the line-numbers; possible values are (none, left, right)
 numbersep=5pt,					% how far the line-numbers are from the code
 numberstyle=\tiny\color{gray}, 	% the style that is used for the line-numbers
-frame=single,	                   % adds a frame around the code
-% light blue works
+}
+
+\lstset{ %MATH MODE
+morecomment=[s][\color{BurntOrange}]{\$}{\$}
+}
+
+%\lstset{ % command
+%	morecomment=*[s][\color{Maroon}]{\\}{ \{ }
+%	morecomment=**[s][\color{Maroon}]{\\}{_}
+%}
+
+
+\lstset{ %set packages for \usepackage commands 
+moredelim=[is][\color{Green}]{<}{>},
+}
+ 
+\lstset{ %begin and end commands, other key words
+morecomment=*[s][\color{Cyan}]{ begin\{ }{ \} },
+morecomment=**[s][\color{Cyan}]{ end\{ }{ \} },
+moredelim=[is][\color{blue}]{"}{"},
 classoffset=1, 					% starting new class
-morekeywords={begin, end},
-keywordstyle=\color{Cyan}\bfseries,
+morekeywords={par, section, subsection, subsubsection, paragraph},
+keywordstyle=\color{Cyan},
 classoffset=0,
-% dark blue words (packages)
+}
+
+\lstset{
 classoffset=2, 					% starting new class
-morekeywords={itemize, enumerate},
-keywordstyle=\color{blue},
-classoffset=0,
-%NEW COMMANDS
-classoffset=3, 					% starting new class
 morekeywords={...},
 keywordstyle=\color{Violet},
 classoffset=0,
-%MATH MODE
-morecomment=[s][\color{BurntOrange}]{\$}{\$}
 }
+
+\lstset{ %when key words are the same as text 
+	morecomment=[s][\color{black}]{\{Var}{\}},
+	morecomment=[s][\color{black}]{\{Cov}{\}},
+	morecomment=[s][\color{black}]{\{OR}{\}},
+	morecomment=[s][\color{black}]{\{ODDS}{\}},
+	morecomment=[s][\color{black}]{\{then}{\}},
+	morecomment=[s][\color{black}]{\{Then}{\}},
+	morecomment=[s][\color{black}]{\{set}{\}},
+	morecomment=[s][\color{black}]{\{C}{\}},
+	morecomment=[s][\color{black}]{\{E}{\}},
+	morecomment=[s][\color{black}]{\{I}{\}},
+	morecomment=[s][\color{black}]{\{N}{\}},
+	morecomment=[s][\color{black}]{\{Q}{\}},
+	morecomment=[s][\color{black}]{\{R}{\}},
+	morecomment=[s][\color{black}]{\{Z}{\}},
+	morecomment=[s][\color{black}]{\{1}{\}},
+} 
+
+%\lstset{literate= %  {, } colored 
+%	{ 9  }{{{\color{red!20!violet} 9  }}}1 % https://tex.stackexchange.com/questions/42889/colored-strings-by-listings-package
+%	{ \{ }{{{\color{Maroon!20!Maroon}\{}}}1
+%	{ \} }{{{\color{Maroon!20!Maroon}\}}}}1
+%}
+
+\lstset{
+morekeywords =	{
+	alph, arabic, Alph, newcommand, rule, text, implies, stackrel, tikz, node, left right, lVert, rVert, protect, mathpalette, independenT, perp, mathrel, mkern2, rlap pmb, phantom, mathbbm, text, underline, overline, textcolor, textstyle, implies, rule, mathbb, infty, definecolor, colorbox, small, texttt, renewcommand, contourlength, contour, uline, usepackage, Cov, Ex, Cor, Var, se, sd, cv, bars, OR, odds, simm, simt, simin, independent, simiid, asn, astto, nto, conprob, conlaw, condist, inn, norm, abs, ssum, ind, pj, Pw, Pwo, pmb, then, Then, thenm, df, set, pval, vs, as, Bias, BNt, sgn, spn, str, BetaD, Bern, Binom, Expon, Gamm, Multinom, Pois, Unif, qed, prop, C, E, I, N, pr, Q, R, Z, Xb, xb, betab, Sigmab, ob, Is, Ns, xdash, circled, cir, phant, highlight, chk, outstanding, code, myuline, ULdepth, DeclareCaptionLabelSeparator, captionsetup, newlength, setlength, tindent, hspace, setcounter, titleformat, theparagraph, titlespacing,  normalfont, normalsize, itshape, newenvironment, medskip, noindent, minipage, linewidth, endminipage, medskip, includegraphics, lipsum, documentclass
+				}
+}
+
+
+
 
