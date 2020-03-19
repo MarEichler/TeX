@@ -157,30 +157,26 @@ indicator function
 \\* 
 $\pj{X}$  &\code{\textbackslash pj\{X\}}&$\ddagger$		& \lstinline|\newcommand{\pj}[1]{\pmb{P}_{#1}}| &
 projection matrix
+\\* 
+$\Pw$  &\code{\textbackslash Pw}&$\ddagger$		& \lstinline|\newcommand{\Pw}{\pmb{P_{\omega}}}| &
+projection operator for $\omegab$
+\\* 
+$\Pwo$  &\code{\textbackslash Pwo}&$\ddagger$		& \lstinline|\newcommand{\Pwo}{\pmb{P}_{\pmb{\omega}_0}}| &
+projection operator for $\omegab_0$
 \\ \hline
  
 
-\multicolumn{5}{c}{\underline{TEXT SHORT CUTS FOR MATH MODE}}
+
+\multicolumn{5}{c}{\underline{TEXT WITH SYMBOLS IN MATH MODE}}
 \\*  
-\pval	 		&\code{\textbackslash pval }	&$\dagger$	& \lstinline|\newcommand{\pval}{\text{$p$-value}| &
-pval text
-\\*  
-$\then$ 		&\code{\textbackslash then }	&$\ddagger$	& \lstinline|\newcommand{\then}{\stackrel{\text{then}}{\implies}}| &
+$\then$ 		&\code{\textbackslash then}	&$\ddagger$	& \lstinline|\newcommand{\then}{\stackrel{\text{then}}{\implies}}| &
 implies arrow with `then' text
 \\*  
 $\Then$ 		&\code{\textbackslash Then }	&$\ddagger$	& \lstinline|\newcommand{\then}{\stackrel{\text{Then}}{\implies}}| &
 implies arrow with `Then' text
 \\*  
-\thenm 		&\code{\textbackslash thenm }		&			& \lstinline|\newcommand{\thenm}{$\stackrel{\text{then}}{\implies}$}| &
+\thenm 		&\code{\textbackslash thenm}		&			& \lstinline|\newcommand{\thenm}{$\stackrel{\text{then}}{\implies}$}| &
 implies arrow with `then' text, out of math mode
-\\* 
-\vs  		&\code{\textbackslash vs }	&$\dagger$			& \lstinline|\newcommand{\vs}{\text{ vs }}| &
-text `\_vs\_' for hypothesis test,  
-$H_0 \vs H_1$ \lstinline|$H_0 \vs H_1$ |
-\\* 
-\as  		&\code{\textbackslash as }	&$\dagger$			& \lstinline|\newcommand{\as}{\text{ as }}| &
-text `\_as\_', 
-$x \as y$ \lstinline|$x \as y$ |
 \\* 
 $\df$  	&\code{\textbackslash df}			&$\ddagger$		& \lstinline|\newcommand{\df}{\stackrel{\text{def}}{=}}| &
 define as ...
@@ -188,6 +184,57 @@ define as ...
 $\set$  &\code{\textbackslash set}			&$\ddagger$		& \lstinline|\newcommand{\set}{\stackrel{\text{set}}{=}}| &
 set as ...
 \\ \hline  
+
+
+\multicolumn{5}{c}{\underline{TEXT IN MATH MODE}}
+\\*  
+\pval	 		&\code{\textbackslash pval}	&$\dagger$	& \lstinline|\newcommand{\pval}{\text{$p$-value}}| &
+pval text
+\\* 
+\vs  		&\code{\textbackslash vs}	&$\dagger$			& \lstinline|\newcommand{\vs}{\text{ vs }}| &
+text `\_vs\_' for hypothesis test,  
+$H_0 \vs H_1$ \lstinline|$H_0 \vs H_1$ |
+\\* 
+\as  		&\code{\textbackslash as}	&$\dagger$			& \lstinline|\newcommand{\as}{\text{ as }}| &
+text `\_as\_', 
+$x \as y$ \lstinline|$x \as y$ |
+\\*  
+\BNt	 		&\code{\textbackslash BNt}	&$\dagger$	& \lstinline|\newcommand{\BNt}{\text{BN}}| &
+BN (Binomial distribution short hand)
+\\*  
+\Bias	 		&\code{\textbackslash Bias}	&$\dagger$	& \lstinline|\newcommand{\Bias}{\text{Bias}}| &
+Bias 
+\\*  
+\sgn	 		&\code{\textbackslash sgn}	&$\dagger$	& \lstinline|\newcommand{\sgn}{\text{sign}}| &
+sign 
+\\*  
+\spn	 		&\code{\textbackslash spn}	&$\dagger$	& \lstinline|\newcommand{\spn}{\text{span}}| &
+span 
+\\*  
+\str	 		&\code{\textbackslash str}	&$\dagger$	& \lstinline|\newcommand{\str}{\text{str}}| &
+stratified sampling  
+\\ \hline 
+
+
+\multicolumn{5}{c}{\underline{TEXT DISTRIBUTION FULL NAMES IN MATH MODE}}
+\\*  
+\BetaD	 		&\code{\textbackslash BetaD}	&$\dagger$	& \lstinline|\newcommand{\BetaD}{\text{Beta}}| & Beta 
+\\*  
+\Bern	 		&\code{\textbackslash Bern}		&$\dagger$	& \lstinline|\newcommand{\Bern}{\text{Bernoulli}}| & Bernoulli
+\\*  
+\Binom	 		&\code{\textbackslash Binom}	&$\dagger$	& \lstinline|\newcommand{\Binom}{\text{Binomial}}| & Binomial
+\\*  
+\Expon	 		&\code{\textbackslash Expon}	&$\dagger$	& \lstinline|\newcommand{\Expon}{\text{Exponential}}| & Exponential
+\\*  
+\Gamm	 		&\code{\textbackslash Gamm}		&$\dagger$	& \lstinline|\newcommand{\Gamm}{\text{Gamma}}| & Gamma
+\\*  
+\Multinom 		&\code{\textbackslash Multinom}	&$\dagger$	& \lstinline|\newcommand{\Multinom}{\text{Multinomial}}| & Multinomial
+\\*  
+\Pois	 		&\code{\textbackslash Pois}		&$\dagger$	& \lstinline|\newcommand{\Pois}{\text{Poisson}}| & Poisson
+\\*  
+\Unif	 		&\code{\textbackslash Unif}		&$\dagger$	& \lstinline|\newcommand{\Unif}{\text{Uniform}}| & Uniform 
+\\ \hline
+
 
 
 \multicolumn{5}{c}{\underline{WRITING PROOFS}}
@@ -198,6 +245,54 @@ hfill the line then add square, to denote end of proof
 \prop  &\code{\textbackslash prop}			&		& \lstinline|\newcommand{\prop}{\phantom{x} \hfill $\star$}| &
 hfill the line then add star, to denote proposition
 \\ \hline 
+
+
+\multicolumn{5}{c}{\underline{LETTERS WITH LINE}}
+\\* 
+$\C$	&\code{\textbackslash C}	&$\ddagger$	&\lstinline|\newcommand{\C}{\mathbb{C}}|	&Complex numbers 
+\\* 
+$\E$	&\code{\textbackslash E}	&$\ddagger$	&\lstinline|\newcommand{\E}{\mathbb{E}}|	&Expected Value 
+\\*
+$\I$	&\code{\textbackslash I}	&$\ddagger$	&\lstinline|\newcommand{\I}{\mathbb{I}}|	&Identity Matrix 
+\\*
+$\N$	&\code{\textbackslash N}	&$\ddagger$	&\lstinline|\newcommand{\N}{\mathbb{N}}|	&Natural number, $\Z^+$ 
+\\*  
+$\pr$	&\code{\textbackslash pr}	&$\ddagger$	&\lstinline|\newcommand{\pr}{\mathbb{P}}|	&Probability 
+\\* 
+$\Q$	&\code{\textbackslash Q}	&$\ddagger$	&\lstinline|\newcommand{\Q}{\mathbb{Q}}|	&Rational Numbers 
+\\* 
+$\R$	&\code{\textbackslash R}	&$\ddagger$	&\lstinline|\newcommand{\R}{\mathbb{R}}|	&Real numbers 
+\\* 
+$\Z$	&\code{\textbackslash Z}	&$\ddagger$	&\lstinline|\newcommand{\Z}{\mathbb{Z}}|	&Integers 
+\\  \hline
+
+\multicolumn{5}{c}{\underline{BOLD LETTERS/CHARACTERS}}
+\\* 
+$\Xb$	&\code{\textbackslash Xb}	&$\ddagger$	&\lstinline|\newcommand{\Xb}{\pmb{X}}|	&Uppercase X
+\\*
+$\xb$	&\code{\textbackslash xb}	&$\ddagger$	&\lstinline|\newcommand{\xb}{\pmb{x}}|	&Lowercase x
+\\* 
+$\betab$	&\code{\textbackslash betab}	&$\ddagger$	&\lstinline|\newcommand{\betab}{\pmb{\beta}}|	&Lowercase beta
+\\*
+$\Sigmab$	&\code{\textbackslash Sigmab}	&$\ddagger$	&\lstinline|\newcommand{\Sigmab}{\pmb{\Sigma}} |	&Uppercase Sigma, variance covariance matrix
+\\*
+$\ob$	&\code{\textbackslash ob}	&$\ddagger$	&\lstinline|\newcommand{\ob}{\pmb{0}}|	&Bold zero, vector or matrix of zero's
+\\*
+$\1$	&\code{\textbackslash 1}	&$\ddagger$	&\lstinline|\newcommand{\1}{\pmb{1}}|	&Bold one, vector or matrix of one's
+\\*
+\multicolumn{5}{l}{\textit{Similar newcommands are used for multiple letters; bold letters used to denote vectors and/or matrices }}
+\\ \hline
+
+\multicolumn{5}{c}{\underline{SCRIPT LETTERS}}
+\\* 
+$\Is$	&\code{\textbackslash Is}	&$\ddagger$	&\lstinline|\newcommand{\Is}{\mathcal{I}}|	&Fisher's Information
+\\*
+$\Ns$	&\code{\textbackslash Ns}	&$\ddagger$	&\lstinline|\newcommand{\Ns}{\mathcal{N}}|	&Normal Distribution
+\\*
+\multicolumn{5}{l}{\textit{Similar newcommands are used for multiple letters; often used to denote distributions}}
+\\ \hline 
+
+
 
 
 \multicolumn{5}{c}{\underline{MISCELLANIOUS}}
@@ -222,7 +317,7 @@ highlight
 \\* 
 \chk 		&\code{\textbackslash chk }	&			& \lstinline|\newcommand{\chk}{\textcolor{red}{\text{CHECK!}}}| &
 check 
-\\ 
+\\* 
 \tiny{\outstanding{x} } &\code{\textbackslash outstanding\{x\} }&&\lstinline|\newcommand{\outstanding}[1]{\textcolor{red}{\text{OUT|
 \rotatebox[origin=c]{180}{$\Lsh$} \lstinline|STANDING: }\text{#1}}}| &
 specify outstanding tasks
@@ -232,54 +327,103 @@ specify outstanding tasks
 &
 inline code 
 \\ \hline
-
-
-\multicolumn{5}{c}{\underline{LETTERS WITH LINE}}
-\\* 
-$\C$	&\code{\textbackslash C}	&$\ddagger$	&\lstinline|\newcommand{\C}{\mathbb{C}}|	&Complex numbers 
-\\* 
-$\E$	&\code{\textbackslash E}	&$\ddagger$	&\lstinline|\newcommand{\E}{\mathbb{E}}|	&Expected Value 
-\\*
-$\I$	&\code{\textbackslash I}	&$\ddagger$	&\lstinline|\newcommand{\I}{\mathbb{I}}|	&Identity Matrix 
-\\*
-$\N$	&\code{\textbackslash N}	&$\ddagger$	&\lstinline|\newcommand{\N}{\mathbb{N}}|	&Natural number, $\Z^+$ 
-\\*  
-$\pr$	&\code{\textbackslash pr}	&$\ddagger$	&\lstinline|\newcommand{\pr}{\mathbb{P}}|	&Probability 
-\\* 
-$\Q$	&\code{\textbackslash Q}	&$\ddagger$	&\lstinline|\newcommand{\Q}{\mathbb{Q}}|	&Rational Numbers 
-\\* 
-$\R$	&\code{\textbackslash R}	&$\ddagger$	&\lstinline|\newcommand{\R}{\mathbb{R}}|	&Real numbers 
-\\* 
-$\Z$	&\code{\textbackslash Z}	&$\ddagger$	&\lstinline|\newcommand{\Z}{\mathbb{Z}}|	&Integers 
-\\  \hline
-
-\multicolumn{5}{c}{\underline{BOLD LETTERS}}
-\\* 
-$\Xb$	&\code{\textbackslash Xb}	&$\ddagger$	&\lstinline|\newcommand{\Xb}{\pmb{X}}|	&Uppercase X
-\\*
-$\xb$	&\code{\textbackslash xb}	&$\ddagger$	&\lstinline|\newcommand{\xb}{\pmb{x}}|	&Lowercase x
-\\* 
-$\betab$	&\code{\textbackslash betab}	&$\ddagger$	&\lstinline|\newcommand{\betab}{\pmb{\beta}}|	&Lowercase beta
-\\*
-$\Sigmab$	&\code{\textbackslash Sigmab}	&$\ddagger$	&\lstinline|\newcommand{\Sigmab}{\pmb{\Sigma}} |	&Uppercase Sigma, variance covariance matrix
-\\*
-\multicolumn{5}{l}{\textit{Similar newcommands are used for multiple letters }}
-\\ \hline 
-
 \end{longtable}
-
-
-
 
 
 \code{\textbackslash newcommand*}  or \code{\textbackslash newcommand}
  
  ``Using the starred version of \code{\textbackslash newcommand*} means that the arguments of the defined command cannot contain a blank line or \code{\textbackslash par}. This makes it a lot easier to spot runaway arguments." - \href{https://tug.org/mail-archives/texhax/2005-March/003732.html}{Source}
 
+\newpage
+\section*{Renew Commands, setup commands, etc}
+
+\subsection*{Customized Underline}
+\href{https://alexwlchan.net/2017/10/latex-underlines/}{Source: https://alexwlchan.net/2017/10/latex-underlines/}
+\begin{lstlisting} 
+\usepackage{<contour>} %fill in around text 
+\usepackage{<ulem>} %using fancy underlining (wave, dots, etc.)
+	%new underline command
+	\renewcommand{\ULdepth}{1.8pt}
+	\contourlength{0.8pt}
+	\newcommand{\myuline}[1]{
+		\uline{\phantom{#1}}
+		\llap{\contour{white}{#1}}
+		}
+\end{lstlisting}
+
+\begin{tabular}{ll}
+\underline{abcd} \quad \underline{efgh}	&\lstinline|\underline{abcd} \quad \underline{efgh}|
+\\
+\myuline{abcd} \quad \myuline{efgh} 	&\lstinline|\myuline{abcd} \quad \myuline{efgh}|
+\end{tabular} 
+
+\subsection*{Captions in Tables are justified (left-aligned) vs centered}
+\href{
+	https://github.com/haozhu233/kableExtra/issues/194
+	}{Source: 
+	https://github.com/haozhu233/kableExtra/issues/194
+	}
+\begin{lstlisting}
+\usepackage{<caption>}
+\DeclareCaptionLabelSeparator*{spaced}{\\[2ex]}
+\captionsetup[table]{format=plain,justification=justified,
+singlelinecheck=false,labelsep=spaced,skip=0pt}
+\end{lstlisting} 
+
+\subsection*{Setting Indent }
+Did not save source :( 
+\begin{lstlisting}
+\usepackage{<indentfirst>} %indent first paragraph in section 
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt} %SENT INDENT TO ZERO 
+\renewcommand{\indent}{\hspace*{\tindent}}
+\end{lstlisting}
+
+\subsection*{Creating Fourth Section} 
+Did not save source :(
+\begin{lstlisting}
+\setcounter{secnumdepth}{5} %5 so that it's in table of contents
+\setcounter{tocdepth}{5} %5 so that its in table of contents 
+\titleformat{\paragraph}
+{\normalfont\normalsize\itshape}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\end{lstlisting}
+
+\newpage 
+\subsection*{Pictures in Multicolumn environment} 
+\href{
+	https://tex.stackexchange.com/questions/12262/multicol-and-figures
+}{Source: 
+	https://tex.stackexchange.com/questions/12262/multicol-and-figures
+}
+\begin{lstlisting} 
+\documentclass[a5paper]{<article>}
+\usepackage{<multicol>,<caption>}
+\usepackage[demo]{<graphicx>}
+\usepackage{<lipsum>}
+\newenvironment{Figure}
+{\par\medskip\noindent\minipage{\linewidth}}
+{\endminipage\par\medskip}
+
+\begin{"document"}
+
+\begin{"multicols"}{2}
+\lipsum[1]
+\begin{"Figure"}
+\centering
+\includegraphics[width=\linewidth]{myimage.png}
+\end{"Figure" }
+
+\lipsum[1]
+\end{"multicols"}
+
+\end{"document"}
+\end{lstlisting}
 
 
  
-
 
 
 
