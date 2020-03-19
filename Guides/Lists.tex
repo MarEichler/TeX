@@ -19,7 +19,7 @@
 \renewcommand{\headrulewidth}{0pt}
 
 %HEADER
-\lhead{LaTeX Guide for when I forget: Lists}
+\lhead{LaTeX Guide for when I forget: Lists \\ \rightmark }
 \rhead{Page \thepage \text{ of} \pageref{LastPage}}
 \setlength{\headsep}{15pt}
 	%two lines for headers: 30 pt
@@ -45,11 +45,11 @@
 	\item item three
 \end{itemize}
 \begin{lstlisting}
-\begin{itemize}
+\begin{"itemize"}
 \item item one
 \item item two
 \item item three
-\end{itemize}
+\end{"itemize"}
 \end{lstlisting}
 
 \subsection{Customized Text}
@@ -59,11 +59,11 @@
 	\item[Three] item three
 \end{itemize}
 \begin{lstlisting}
-\begin{itemize}
+\begin{"itemize"}
 \item[One] item one 
 \item[Two] item two
 \item[Three] item three
-\end{itemize}
+\end{"itemize"}
 \end{lstlisting}
 
 
@@ -78,11 +78,11 @@ Requires \pack{enumitem} package
 	\item item three
 \end{enumerate}
 \begin{lstlisting}
-\begin{enumerate}
+\begin{"enumerate"}
 \item item one 
 \item item two
 \item item three
-\end{enumerate}
+\end{"enumerate"}
 \end{lstlisting}
 
 
@@ -93,11 +93,11 @@ Requires \pack{enumitem} package
 		\item item three
 \end{enumerate}
 \begin{lstlisting}
-\begin{enumerate}[label=(\arabic*)]
+\begin{"enumerate"}[label=(\arabic*)]
 \item item one 
 \item item two
 \item item three
-\end{enumerate}
+\end{"enumerate"}
 \end{lstlisting}
 
 
@@ -110,11 +110,11 @@ Requires \pack{enumitem} package
 	\item item three
 \end{enumerate}
 \begin{lstlisting}
-\begin{enumerate}[label=\Alph*.]
+\begin{"enumerate"}[label=\Alph*.]
 \item item one 
 \item item two
 \item item three
-\end{enumerate}
+\end{"enumerate"}
 \end{lstlisting}
 
 \subsubsection{Lowercase}
@@ -124,11 +124,12 @@ Requires \pack{enumitem} package
 	\item item three
 \end{enumerate}
 \begin{lstlisting}
-\begin{enumerate}[label=\alph*.]
+\begin{"enumerate"}[label=\alph*.]
 \item item one 
 \item item two
 \item item three
-\end{enumerate}
+\end{"enumerate"}
+
 \end{lstlisting}
 
 \subsection{Spacing}
@@ -157,21 +158,21 @@ Requires \pack{enumitem} package
 \end{multicols}
 \begin{multicols}{2}
 \begin{lstlisting}
-\begin{enumerate}[itemsep=0pt,
+\begin{"enumerate"}[itemsep=0pt,
                   parsep=0pt]
 \item item one
 \item item two
 \item item three
-\end{enumerate} 
+\end{"enumerate"} 
 \end{lstlisting}
 	\columnbreak 
 \begin{lstlisting}
-\begin{enumerate}[itemsep=10pt, 
+\begin{"enumerate"}[itemsep=10pt, 
                   parsep=10pt]
 \item item one
 \item item two
 \item item three
-\end{enumerate} 
+\end{"enumerate"} 
 \end{lstlisting}
 \end{multicols}
 
